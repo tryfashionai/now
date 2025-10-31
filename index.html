@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Try Fashion AI - Virtual Try-On & AI Photo Editor</title>
-  <meta name="description" content="Try Fashion AI is your ultimate virtual try-on and AI photo editor app. Instantly try clothes virtually, create anime art portraits, edit collages, and more with advanced AI tools.">
-  <meta name="keywords" content="virtual try on app, AI outfit changer, virtual clothes try on, AI photo editor, fashion try on app, virtual fashion, AI dress try on, try fashion AI, photo editing app, outfit visualizer">
+  <meta name="description" content="Try Fashion AI is your ultimate AI-powered photo editor and virtual try-on app. Instantly visualize outfits, create anime portraits, and enhance photos with intelligent fashion technology.">
+  <meta name="keywords" content="virtual try on app, AI outfit changer, virtual clothes try on, AI photo editor, fashion try on app, AI dress try on, outfit visualizer, virtual fashion, anime portrait AI, AI photo enhancer">
   <meta name="author" content="Pankaj Rai">
   <meta name="google-site-verification" content="Rj9WYPHIu2Ewx5iD2wDY8HMxJPPiFOT3u_Ckpvh8xqU" />
+  <link rel="canonical" href="https://pankajrai.github.io/tryfashionai/">
+  <meta name="language" content="en">
+
   <!-- Open Graph Meta for Sharing -->
   <meta property="og:title" content="Try Fashion AI - Virtual Try-On & AI Photo Editor">
-  <meta property="og:description" content="Transform your photos with AI! Try Fashion AI offers virtual try-on, anime art portraits, hairstyle analysis, and stunning filters.">
+  <meta property="og:description" content="Transform your photos with AI! Try Fashion AI offers virtual try-on, anime portraits, hairstyle insights, and stunning filters for next-level creativity.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pankajrai.github.io/tryfashionai/">
   <meta property="og:image" content="https://play-lh.googleusercontent.com/og-image?id=com.pankaj.cropvi">
@@ -20,11 +23,11 @@
   {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
-    "name": "Try Fashion AI - Photo Editor",
+    "name": "Try Fashion AI - Virtual Try-On & Photo Editor",
     "operatingSystem": "ANDROID",
     "applicationCategory": "Photography",
     "url": "https://play.google.com/store/apps/details?id=com.pankaj.cropvi",
-    "description": "Try Fashion AI is an AI-powered photo editor and virtual try-on app that lets users visualize outfits, create anime portraits, and edit photos like a pro.",
+    "description": "Try Fashion AI lets users visualize outfits, try clothes virtually, and enhance photos using artificial intelligence. It also creates anime-style portraits and stylish collages.",
     "author": {
       "@type": "Person",
       "name": "Pankaj Rai"
@@ -37,107 +40,221 @@
   }
   </script>
 
+  <!-- FAQ Schema for AEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Try Fashion AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Try Fashion AI is an AI-powered virtual try-on and photo editor app that lets users visualize clothes, generate anime portraits, and enhance photos easily."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I try clothes virtually with Try Fashion AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! You can use the Virtual Try-On feature to see how different outfits look on you instantly using advanced AI algorithms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Try Fashion AI free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Try Fashion AI is free to download from the Google Play Store and offers optional premium features for deeper customization."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Styles -->
   <style>
+    * { box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      line-height: 1.6;
+      font-family: 'Poppins', Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      background: linear-gradient(180deg, #f9f9ff, #eaf2ff);
       color: #222;
-      background-color: #fafafa;
+      overflow-x: hidden;
     }
+
     header {
       background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: white;
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 4rem 1.5rem 3rem;
+      position: relative;
+      overflow: hidden;
     }
+    header::after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      top: -50px;
+      right: -80px;
+      animation: float 8s ease-in-out infinite alternate;
+    }
+    @keyframes float {
+      from { transform: translateY(0px); }
+      to { transform: translateY(25px); }
+    }
+
     header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.4rem;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.5px;
     }
     header p {
       font-size: 1.1rem;
+      opacity: 0.9;
     }
+
     main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2.5rem;
       background: white;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      border-radius: 12px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      animation: fadeIn 1s ease;
     }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     h2 {
       color: #2575fc;
       margin-top: 2rem;
+      font-size: 1.6rem;
     }
+
     ul {
       padding-left: 20px;
+      line-height: 1.8;
     }
+
+    .highlight {
+      background: linear-gradient(90deg, #2575fc, #6a11cb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+
     .download {
-      display: block;
+      display: inline-block;
       text-align: center;
-      background: #2575fc;
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
       color: white;
-      padding: 1rem;
-      border-radius: 8px;
+      padding: 1rem 2rem;
+      border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 2rem;
+      margin: 2rem auto;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(37,117,252,0.3);
     }
     .download:hover {
-      background: #1b5edb;
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(37,117,252,0.4);
     }
+
+    .faq {
+      background: #f6f9ff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+      border-left: 4px solid #2575fc;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
       color: #777;
       font-size: 0.9rem;
     }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      main { padding: 1.5rem; }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Try Fashion AI: Your Ultimate AI-Powered Photo Editor & Virtual Try-On</h1>
-    <p>Experience the future of fashion and creativity with AI — edit, enhance, and explore your style like never before.</p>
+    <h1>Try Fashion AI: Virtual Try-On & Smart Photo Editor</h1>
+    <p>Explore how you’d look in new outfits, create anime portraits, and edit photos effortlessly with AI-powered creativity.</p>
   </header>
 
   <main>
-    <h2>✨ Transformative AI Features</h2>
-    <ul>
-      <li><strong>Festive Vibe:</strong> Instantly give your photos a holiday spirit — from Diwali to Christmas, let your pictures celebrate with you.</li>
-      <li><strong>Effortless Perfection:</strong> Get instant AI insights for perfect edits — no manual tweaking needed.</li>
-      <li><strong>Multi-Photo Collage:</strong> Combine up to 5 photos into one artistic, personalized masterpiece.</li>
-    </ul>
+    <section>
+      <h2>✨ Transform Your Photos with AI</h2>
+      <ul>
+        <li><strong>Festive Filters:</strong> Add Diwali sparkle, Christmas glow, or any festive vibe instantly.</li>
+        <li><strong>Auto Enhancements:</strong> One-tap AI retouch and lighting optimization for perfect photos.</li>
+        <li><strong>Multi-Photo Collage:</strong> Merge up to 5 images into one artistic layout.</li>
+      </ul>
+    </section>
 
-    <h2>👗 Virtual Try-On: Explore Fashion Instantly</h2>
-    <p>Want to see how you’d look in a new outfit? Try Fashion AI’s <strong>Virtual Try-On</strong> lets you visualize clothing and accessories in seconds. No risk, no commitment — just pure creative exploration.</p>
+    <section>
+      <h2>👗 Virtual Try-On: Your <span class="highlight">AI Dressing Room</span></h2>
+      <p>Try Fashion AI is your <strong>AI outfit changer app</strong>. Visualize yourself in stylish clothes, experiment with colors and trends, and enjoy a realistic <strong>AI-powered virtual dressing room</strong> experience — no store visit needed!</p>
+    </section>
 
-    <h2>🎨 Artistic AI Tools</h2>
-    <ul>
-      <li><strong>Anime Art Portraits:</strong> Transform your photo into enchanting, hand-drawn anime-style art.</li>
-      <li><strong>Background Teleport:</strong> Replace or blur backgrounds to travel anywhere your imagination takes you.</li>
-      <li><strong>Specialized Edits:</strong> Neon City Light, Summer Beach Vibes, and Vintage Film Looks.</li>
-    </ul>
+    <section>
+      <h2>🎨 Artistic & Intelligent Tools</h2>
+      <ul>
+        <li><strong>Anime Portraits:</strong> Turn your photo into a detailed, anime-inspired artwork.</li>
+        <li><strong>Background Magic:</strong> Blur or teleport backgrounds for creative storytelling.</li>
+        <li><strong>Pro Filters:</strong> From Neon City to Vintage Film, discover filters that match your mood.</li>
+      </ul>
+    </section>
 
-    <h2>🖼️ Core Photo Editing Tools</h2>
-    <ul>
-      <li>Perform Virtual Try-On based on prompt.</li>
-      <li>Crop, rotate, and fine-tune brightness, contrast, and saturation.</li>
-      <li>Apply viral filters for instantly shareable visuals.</li>
-    </ul>
+    <section>
+      <h2>🧠 In Simple Words</h2>
+      <p>Try Fashion AI helps you <strong>see yourself in new clothes</strong>, change your look, and enhance your photos — all with artificial intelligence. It’s your creative assistant for fashion and photography.</p>
+    </section>
 
-    <a class="download" href="https://play.google.com/store/apps/details?id=com.pankaj.cropvi" target="_blank">
-      📲 Download Try Fashion AI on Google Play
-    </a>
+    <section>
+      <a class="download" href="https://play.google.com/store/apps/details?id=com.pankaj.cropvi" target="_blank">📲 Download Try Fashion AI on Google Play</a>
+    </section>
 
-    <h2>🌍 Why Users Love It</h2>
-    <p>Try Fashion AI empowers users to creatively express themselves using advanced AI features. From <strong>Virtual Try-On</strong> to <strong>Anime Portraits</strong>, it’s your go-to solution for transforming everyday photos into extraordinary visuals.</p>
+    <section>
+      <h2>💡 Quick Answers</h2>
+      <ul>
+        <li><strong>Best For:</strong> Virtual Try-On, AI Outfits, Anime Portraits, and Collage Editing</li>
+        <li><strong>Platform:</strong> Android</li>
+        <li><strong>Category:</strong> Photography / Fashion</li>
+        <li><strong>Developer:</strong> Pankaj Rai</li>
+      </ul>
+    </section>
+
+    <section class="faq">
+      <h2>🙋 Frequently Asked Questions</h2>
+      <p><strong>What is Try Fashion AI?</strong><br> It’s an AI app that lets you virtually try clothes, create anime portraits, and edit photos like a pro.</p>
+      <p><strong>Can I use it for free?</strong><br> Absolutely! You can download it free from Google Play and use all essential features right away.</p>
+      <p><strong>Does it work on all Android phones?</strong><br> Yes, Try Fashion AI supports most modern Android devices seamlessly.</p>
+    </section>
+
+    <p style="text-align:center;margin-top:2rem;">
+      Official Links: 
+      <a href="https://play.google.com/store/apps/details?id=com.pankaj.cropvi" target="_blank">Google Play</a>
+    </p>
   </main>
 
   <footer>
-    © 2025 Try Fashion AI by Pankaj Rai. All rights reserved.
+    © 2025 Try Fashion AI. All rights reserved.
   </footer>
 
 </body>
